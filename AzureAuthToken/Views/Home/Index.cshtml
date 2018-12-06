@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div>
+    Welcome to Azure Auth Token 
+    <br />
+    @if (User.Identity.IsAuthenticated)
+    {
+    <div>
+        You are @User.Identity.Name
+    </div>
+
+    } else
+    {
+    <div>
+        You are anonymous
+        Click <a asp-area="" asp-controller="Home" asp-action="Tokens">Tokens</a> to login
+    </div>
+        
+    }
+
+</div>
